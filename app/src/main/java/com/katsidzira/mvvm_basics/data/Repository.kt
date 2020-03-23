@@ -1,8 +1,6 @@
 package com.katsidzira.mvvm_basics.data
 
-class Repository private constructor(quoteDao: FakeQuoteDao) {
-
-    var quoteDao = FakeQuoteDao()
+class Repository private constructor(private val quoteDao: FakeQuoteDao) {
 
     fun addQuote(quote: Quote) {
         quoteDao.addQuote(quote)
